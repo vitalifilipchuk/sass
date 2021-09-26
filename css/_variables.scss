@@ -1,0 +1,9 @@
+$darkColor: #050505;
+$blueColor: #0d3ed1;
+$orangeColor: #fc5a14;
+$whiteColor: #ffffff;
+
+@mixin verticalCenter {
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,31 @@
+header {
+    background-color: $darkColor;
+    padding: 20px 0;
+    .header__layout {
+        @include verticalCenter;
+    }
+    .main-nav {
+        margin: 0 30px;
+        flex-grow: 1;
+    }
+    .header__menu {
+        @include verticalCenter;
+        justify-content: space-evenly;
+    }
+    .header__contacts {
+        :first-child {
+            margin-bottom: 10px;
+        }
+        .header__contacts-item {
+            display: block;
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
+}
+
+.logo {
+    svg {
+        width: 154px;
+    }
+}
