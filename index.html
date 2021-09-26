@@ -4,6 +4,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Styling with SCSS</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -12,7 +15,7 @@
 			<div class="container">
 				<div class="header__layout">
 					<a href="/" class="logo header__logo">
-						<svg xmlns="http://www.w3.org/2000/svg"><path d="M53.061 24.777h8.886v-2.42h-5.951V10.895h-2.935v13.882ZM67.968 24.98c3.158 0 5.124-2.162 5.124-5.368 0-3.226-1.966-5.382-5.124-5.382-3.159 0-5.124 2.155-5.124 5.382 0 3.206 1.965 5.368 5.124 5.368Zm.013-2.237c-1.457 0-2.203-1.335-2.203-3.151 0-1.817.746-3.159 2.203-3.159 1.43 0 2.176 1.342 2.176 3.159 0 1.816-.745 3.151-2.176 3.151ZM79.087 28.898c2.976 0 5.09-1.356 5.09-4.02V14.366H81.31v1.748h-.108c-.386-.847-1.233-1.884-2.975-1.884-2.285 0-4.216 1.776-4.216 5.32 0 3.464 1.877 5.078 4.222 5.078 1.66 0 2.59-.834 2.97-1.695h.121v1.905c0 1.43-.915 1.986-2.169 1.986-1.274 0-1.918-.556-2.155-1.187l-2.67.36c.345 1.64 1.951 2.9 4.757 2.9Zm.061-6.44c-1.416 0-2.189-1.124-2.189-2.92 0-1.77.76-3.01 2.19-3.01 1.402 0 2.189 1.186 2.189 3.01 0 1.836-.8 2.92-2.19 2.92ZM90.607 24.98c3.158 0 5.124-2.162 5.124-5.368 0-3.226-1.966-5.382-5.124-5.382-3.159 0-5.124 2.155-5.124 5.382 0 3.206 1.965 5.368 5.124 5.368Zm.013-2.237c-1.457 0-2.203-1.335-2.203-3.151 0-1.817.746-3.159 2.203-3.159 1.43 0 2.176 1.342 2.176 3.159 0 1.816-.746 3.151-2.176 3.151ZM97.036 24.777h2.887V14.366h-2.887v10.41Zm1.45-11.753c.861 0 1.566-.658 1.566-1.464 0-.8-.705-1.458-1.566-1.458-.854 0-1.559.658-1.559 1.458 0 .806.705 1.464 1.56 1.464ZM101.664 28.68h2.887v-5.57h.088c.4.867 1.274 1.836 2.955 1.836 2.373 0 4.223-1.877 4.223-5.361 0-3.579-1.932-5.355-4.216-5.355-1.742 0-2.575 1.037-2.962 1.884h-.129v-1.748h-2.846V28.68Zm2.826-9.109c0-1.857.786-3.043 2.189-3.043 1.431 0 2.19 1.24 2.19 3.043 0 1.817-.773 3.077-2.19 3.077-1.389 0-2.189-1.22-2.189-3.077ZM121.832 17.334c-.258-1.918-1.803-3.104-4.433-3.104-2.664 0-4.419 1.234-4.413 3.24-.006 1.559.976 2.569 3.01 2.976l1.803.359c.908.183 1.322.515 1.335 1.037-.013.617-.684 1.057-1.694 1.057-1.031 0-1.715-.44-1.891-1.288l-2.84.15c.271 1.992 1.965 3.22 4.724 3.22 2.697 0 4.629-1.377 4.636-3.43-.007-1.505-.99-2.407-3.009-2.82l-1.885-.38c-.969-.21-1.328-.542-1.321-1.044-.007-.623.698-1.03 1.592-1.03 1.004 0 1.6.55 1.742 1.22l2.644-.163ZM129.991 20.344c.007 1.396-.949 2.128-1.986 2.128-1.091 0-1.796-.766-1.803-1.993v-6.113h-2.887v6.629c.006 2.433 1.43 3.917 3.524 3.917 1.566 0 2.691-.806 3.159-2.026h.108v1.89h2.772v-10.41h-2.887v5.978ZM134.615 24.777h2.888v-6.25c0-1.152.732-1.918 1.694-1.918.949 0 1.586.65 1.586 1.674v6.494h2.8v-6.358c0-1.078.617-1.81 1.667-1.81.922 0 1.613.576 1.613 1.735v6.433h2.881v-7.002c0-2.257-1.342-3.545-3.281-3.545-1.525 0-2.711.78-3.138 1.973h-.108c-.332-1.207-1.397-1.973-2.827-1.973-1.403 0-2.467.746-2.901 1.973h-.122v-1.837h-2.752v10.41Z" class="cneutral" fill="#3C2979"/><path d="M17.123 2h8.999L22.51 12.094c-6.358 1.117-11.22 7.269-11.22 14.689 0 3.348.99 6.437 2.659 8.922H2L12.924 5.178C13.61 3.258 15.274 2 17.123 2Z" class="ccompli1" fill="#341492"/><path d="m26.122 2-2.539 7.094L22.818 2h3.304Z" fill="#000" fill-opacity=".3"/><path d="M31.817 2h-8.999l3.597 10.052c6.484.993 11.48 7.21 11.48 14.731 0 3.348-.99 6.437-2.66 8.922H46.94L36.016 5.178C35.33 3.258 33.666 2 31.816 2Z" class="ccustom" fill="#4C28B5"/><path d="M15.518 34.733c-1.538-2.19-2.455-4.95-2.455-7.95 0-7.117 5.162-12.887 11.529-12.887s11.529 5.77 11.529 12.887c0 3-.917 5.76-2.455 7.95a15.146 15.146 0 0 0-9.074-2.993c-3.407 0-6.55 1.114-9.074 2.993Z" class="ccustom" fill="#4C28B5"/></svg>
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 154 36"><path d="M53.061 24.777h8.886v-2.42h-5.951V10.895h-2.935v13.882ZM67.968 24.98c3.158 0 5.124-2.162 5.124-5.368 0-3.226-1.966-5.382-5.124-5.382-3.159 0-5.124 2.155-5.124 5.382 0 3.206 1.965 5.368 5.124 5.368Zm.013-2.237c-1.457 0-2.203-1.335-2.203-3.151 0-1.817.746-3.159 2.203-3.159 1.43 0 2.176 1.342 2.176 3.159 0 1.816-.745 3.151-2.176 3.151ZM79.087 28.898c2.976 0 5.09-1.356 5.09-4.02V14.366H81.31v1.748h-.108c-.386-.847-1.233-1.884-2.975-1.884-2.285 0-4.216 1.776-4.216 5.32 0 3.464 1.877 5.078 4.222 5.078 1.66 0 2.59-.834 2.97-1.695h.121v1.905c0 1.43-.915 1.986-2.169 1.986-1.274 0-1.918-.556-2.155-1.187l-2.67.36c.345 1.64 1.951 2.9 4.757 2.9Zm.061-6.44c-1.416 0-2.189-1.124-2.189-2.92 0-1.77.76-3.01 2.19-3.01 1.402 0 2.189 1.186 2.189 3.01 0 1.836-.8 2.92-2.19 2.92ZM90.607 24.98c3.158 0 5.124-2.162 5.124-5.368 0-3.226-1.966-5.382-5.124-5.382-3.159 0-5.124 2.155-5.124 5.382 0 3.206 1.965 5.368 5.124 5.368Zm.013-2.237c-1.457 0-2.203-1.335-2.203-3.151 0-1.817.746-3.159 2.203-3.159 1.43 0 2.176 1.342 2.176 3.159 0 1.816-.746 3.151-2.176 3.151ZM97.036 24.777h2.887V14.366h-2.887v10.41Zm1.45-11.753c.861 0 1.566-.658 1.566-1.464 0-.8-.705-1.458-1.566-1.458-.854 0-1.559.658-1.559 1.458 0 .806.705 1.464 1.56 1.464ZM101.664 28.68h2.887v-5.57h.088c.4.867 1.274 1.836 2.955 1.836 2.373 0 4.223-1.877 4.223-5.361 0-3.579-1.932-5.355-4.216-5.355-1.742 0-2.575 1.037-2.962 1.884h-.129v-1.748h-2.846V28.68Zm2.826-9.109c0-1.857.786-3.043 2.189-3.043 1.431 0 2.19 1.24 2.19 3.043 0 1.817-.773 3.077-2.19 3.077-1.389 0-2.189-1.22-2.189-3.077ZM121.832 17.334c-.258-1.918-1.803-3.104-4.433-3.104-2.664 0-4.419 1.234-4.413 3.24-.006 1.559.976 2.569 3.01 2.976l1.803.359c.908.183 1.322.515 1.335 1.037-.013.617-.684 1.057-1.694 1.057-1.031 0-1.715-.44-1.891-1.288l-2.84.15c.271 1.992 1.965 3.22 4.724 3.22 2.697 0 4.629-1.377 4.636-3.43-.007-1.505-.99-2.407-3.009-2.82l-1.885-.38c-.969-.21-1.328-.542-1.321-1.044-.007-.623.698-1.03 1.592-1.03 1.004 0 1.6.55 1.742 1.22l2.644-.163ZM129.991 20.344c.007 1.396-.949 2.128-1.986 2.128-1.091 0-1.796-.766-1.803-1.993v-6.113h-2.887v6.629c.006 2.433 1.43 3.917 3.524 3.917 1.566 0 2.691-.806 3.159-2.026h.108v1.89h2.772v-10.41h-2.887v5.978ZM134.615 24.777h2.888v-6.25c0-1.152.732-1.918 1.694-1.918.949 0 1.586.65 1.586 1.674v6.494h2.8v-6.358c0-1.078.617-1.81 1.667-1.81.922 0 1.613.576 1.613 1.735v6.433h2.881v-7.002c0-2.257-1.342-3.545-3.281-3.545-1.525 0-2.711.78-3.138 1.973h-.108c-.332-1.207-1.397-1.973-2.827-1.973-1.403 0-2.467.746-2.901 1.973h-.122v-1.837h-2.752v10.41Z" class="cneutral" fill="#ffffff"/><path d="M17.123 2h8.999L22.51 12.094c-6.358 1.117-11.22 7.269-11.22 14.689 0 3.348.99 6.437 2.659 8.922H2L12.924 5.178C13.61 3.258 15.274 2 17.123 2Z" class="ccompli1" fill="#341492"/><path d="m26.122 2-2.539 7.094L22.818 2h3.304Z" fill="#000" fill-opacity=".3"/><path d="M31.817 2h-8.999l3.597 10.052c6.484.993 11.48 7.21 11.48 14.731 0 3.348-.99 6.437-2.66 8.922H46.94L36.016 5.178C35.33 3.258 33.666 2 31.816 2Z" class="ccustom" fill="#4C28B5"/><path d="M15.518 34.733c-1.538-2.19-2.455-4.95-2.455-7.95 0-7.117 5.162-12.887 11.529-12.887s11.529 5.77 11.529 12.887c0 3-.917 5.76-2.455 7.95a15.146 15.146 0 0 0-9.074-2.993c-3.407 0-6.55 1.114-9.074 2.993Z" class="ccustom" fill="#fc5a14"/></svg>
 					</a>
 					<nav class="main-nav">
 						<ul class="header__menu">
@@ -66,33 +69,79 @@
 				<div class="container">
 					<div class="news-section__content">
 						<article class="news-feed__article">
-							<img src="" alt="" class="news-feed__img">
+							<img src="img/article_img1.jpg" alt="" class="news-feed__img">
 							<h3 class="news-feed__title">An interesting title</h3>
 							<p class="news-feed__preview">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-							<div class="news-feed__link">Read more</div>
+							<a href="#" class="news-feed__link">Read more</a>
 						</article>
 						<article class="news-feed__article">
-							<img src="" alt="" class="news-feed__img">
+							<img src="img/article_img2.jpg" alt="" class="news-feed__img">
 							<h3 class="news-feed__title">An interesting title</h3>
 							<p class="news-feed__preview">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-							<div class="news-feed__link">Read more</div>
+							<a href="#" class="news-feed__link">Read more</a>
 						</article>
 						<article class="news-feed__article">
-							<img src="" alt="" class="news-feed__img">
+							<img src="img/article_img3.jpg" alt="" class="news-feed__img">
 							<h3 class="news-feed__title">An interesting title</h3>
 							<p class="news-feed__preview">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-							<div class="news-feed__link">Read more</div>
+							<a href="#" class="news-feed__link">Read more</a>
 						</article>
 						<article class="news-feed__article">
-							<img src="" alt="" class="news-feed__img">
+							<img src="img/article_img4.jpg" alt="" class="news-feed__img">
 							<h3 class="news-feed__title">An interesting title</h3>
 							<p class="news-feed__preview">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-							<div class="news-feed__link">Read more</div>
+							<a href="#" class="news-feed__link">Read more</a>
 						</article>
 					</div>
 				</div>
 			</section>
+
+			<div id="gallery" class="gallery">
+				<div class="gallery__item"><img src="img/gallery_item1.jpg" alt=""></div>
+				<div class="gallery__item"><img src="img/gallery_item2.jpg" alt=""></div>
+				<div class="gallery__item"><img src="img/gallery_item3.jpg" alt=""></div>
+				<div class="gallery__item"><img src="img/gallery_item4.jpg" alt=""></div>
+				<div class="gallery__item"><img src="img/gallery_item5.jpg" alt=""></div>
+				<div class="gallery__item"><img src="img/gallery_item6.jpg" alt=""></div>
+				<div class="gallery__item"><img src="img/gallery_item7.jpg" alt=""></div>
+			</div>
+
+			<div id="contacts" class="contacts-block">
+				<div class="container">
+					<div class="contacts-block__layout">
+						<div class="contacts__text">
+							<h2 class="block__title">Contact information</h2>
+							<ul class="contacts-list">
+								<li><a href="tel:1234567890">+123-456-78-90</a></li>
+								<li><a href="mailto:johndoe@mail.com">johndoe@mail.com</a></li>
+							</ul>
+							<div class="address">Ukraine, Kyiv <br> Independence Square</div>
+							<h3>Working hours:</h3>
+							<ul class="working-hours">
+								<li><strong>Mon-Fri:</strong> 09:00 - 18:00</li>
+								<li><strong>Sat-Sun:</strong> Weekend</li>
+							</ul>
+						</div>
+						<div class="contacts__map">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1270.2444814532655!2d30.522221654433558!3d50.45061885370985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce50f8b6e3c3%3A0xb528dc4d6dadc4f8!2z0JzQsNC50LTQsNC9INCd0LXQt9Cw0LLQuNGB0LjQvNC-0YHRgtC4LCDQmtC40LXQsiwgMDIwMDA!5e0!3m2!1sru!2sua!4v1632684677251!5m2!1sru!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
 		</main>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__layout">
+					<div class="copyright">© Vitali Filipchuk 2021</div>
+					<ul class="social-links">
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
 	</div>
 	
 	<script src="js/script.js"></script>
