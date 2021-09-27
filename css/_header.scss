@@ -1,18 +1,61 @@
 header {
     background-color: $darkColor;
     padding: 20px 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 5;
     .header__layout {
         @include verticalCenter;
     }
     .main-nav {
-        margin: 0 30px;
+        margin: 0 auto;
+        padding: 10px 0 0;
         flex-grow: 1;
+        max-width: 660px;
+        position: relative;
+        .main-nav__border {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: $whiteColor;
+            z-index: 1;
+        }
+        .main-nav__hover-element {
+            position: absolute;
+            height: 1px;
+            bottom: 0;
+            transition: 0.3s;
+            background-color: $orangeColor;
+            z-index: 2;
+        }
     }
     .header__menu {
         @include verticalCenter;
         justify-content: space-evenly;
+        .header__menu-item {
+            display: inline-flex;
+            flex-grow: 1;
+            a {
+                @include verticalCenter;
+                justify-content: center;
+                text-align: center;
+                height: 100%;
+                width: 100%;
+                font-size: 16px;
+                padding-bottom: 10px;
+                transition: color 0.3s;
+                &:hover {
+                    color: $orangeColor;
+                }
+            }
+        }
     }
-    .header__contacts {
+    .header__contacts { 
+        margin-left: 30px;
         :first-child {
             margin-bottom: 10px;
         }
@@ -21,6 +64,9 @@ header {
             font-size: 16px;
             font-weight: 500;
         }
+    }
+    .logo {
+        margin-right: 30px;
     }
 }
 

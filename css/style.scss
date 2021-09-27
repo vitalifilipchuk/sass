@@ -38,17 +38,26 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     line-height: 1.2;
+    color: $whiteColor;
 }
 
 a {
     color: $whiteColor;
     text-decoration: none;
+    transition: color 0.3s;
+    &:hover {
+        color: $orangeColor;
+    }
 }
 
 .container {
     max-width: 1280px;
     padding: 0 20px;
     margin: 0 auto;
+}
+
+.page-content {
+    padding-top: 88px;
 }
 
 @import "./header";
