@@ -1,0 +1,9 @@
+.main-block {
+    padding: 50px 0;
+    background-color: $darkColor;
+    position: relative;
+    height: calc(100vh - 88px);
+    min-height: 540px;
+    max-height: 840px;
+    @include verticalCenter;
+}

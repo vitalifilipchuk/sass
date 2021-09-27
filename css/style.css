@@ -35,11 +35,18 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   line-height: 1.2;
+  color: #ffffff;
 }
 
 a {
   color: #ffffff;
   text-decoration: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #fc5a14;
 }
 
 .container {
@@ -48,9 +55,18 @@ a {
   margin: 0 auto;
 }
 
+.page-content {
+  padding-top: 88px;
+}
+
 header {
   background-color: #050505;
   padding: 20px 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 5;
 }
 
 header .header__layout {
@@ -63,10 +79,33 @@ header .header__layout {
 }
 
 header .main-nav {
-  margin: 0 30px;
+  margin: 0 auto;
+  padding: 10px 0 0;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  max-width: 660px;
+  position: relative;
+}
+
+header .main-nav .main-nav__border {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #ffffff;
+  z-index: 1;
+}
+
+header .main-nav .main-nav__hover-element {
+  position: absolute;
+  height: 1px;
+  bottom: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-color: #fc5a14;
+  z-index: 2;
 }
 
 header .header__menu {
@@ -81,6 +120,42 @@ header .header__menu {
           justify-content: space-evenly;
 }
 
+header .header__menu .header__menu-item {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+header .header__menu .header__menu-item a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+  padding-bottom: 10px;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+header .header__menu .header__menu-item a:hover {
+  color: #fc5a14;
+}
+
+header .header__contacts {
+  margin-left: 30px;
+}
+
 header .header__contacts :first-child {
   margin-bottom: 10px;
 }
@@ -91,7 +166,26 @@ header .header__contacts .header__contacts-item {
   font-weight: 500;
 }
 
+header .logo {
+  margin-right: 30px;
+}
+
 .logo svg {
   width: 154px;
+}
+
+.main-block {
+  padding: 50px 0;
+  background-color: #050505;
+  position: relative;
+  height: calc(100vh - 88px);
+  min-height: 540px;
+  max-height: 840px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=style.css.map */
