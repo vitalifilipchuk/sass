@@ -1,16 +1,79 @@
 .main-block {
     padding: 50px 0;
-    background-color: $darkColor;
     position: relative;
     height: calc(100vh - 88px);
     min-height: 540px;
-    max-height: 840px;
+    max-height: 1080px;
     @include verticalCenter;
 
     .main-block__content {
         position: relative;
         z-index: 1;
+        max-width: 540px;
     }
+
+    .main-block__header {
+        display: inline-block;
+        background: linear-gradient(to bottom,rgba(255,255,255,0) 74%,$orangeColorRGBA 74%,$orangeColorRGBA 90%,rgba(255,255,255,0) 90%);
+    }
+    .main-block__text {
+        line-height: 1.5;
+        font-weight: 500;
+    }
+    .glowing-element {
+        position: absolute;
+        left: 900px;
+        top: 50%;
+    }
+}
+
+.glowing-element {
+    position: relative;
+    .glowing-element__shadow {
+        $size: 40px;
+        position: absolute;
+        box-shadow: 0 0 80px 24px $orangeColor;
+        animation: flashElement 3s ease infinite;
+        opacity: 0.5;
+        width: $size;
+        height: $size;
+        left: calc(50% - #{$size} / 2);
+        top: calc(50% - #{$size} / 2);
+        border-radius: 50%;
+        background-color: $whiteColor;
+    }
+    $circlesCount: 3;
+    @for $i from 1 through $circlesCount {
+        .glowing-element__circle#{$i} {
+            $size: #{$i * 120px - ($i - 1) * 50px};
+            width: $size;
+            height: $size;
+            left: calc(50% - #{$size} / 2);
+            top: calc(50% - #{$size} / 2);
+            position: absolute;
+            border: 1px solid $orangeColor;
+            transform: rotateZ(0deg);
+            animation-name: rotate#{$i};
+            animation-timing-function: linear;
+            animation-duration: #{3 + $i*2}s;
+            animation-iteration-count: infinite;
+            box-shadow: 0 0 2px 1px #fcab14;
+
+            @keyframes rotate#{$i} {
+                0% {
+                    transform: rotateZ(0deg);
+                }
+                100% {
+                    @if $i % 2 == 0 {
+                        transform: rotateZ(-360deg);
+                    } @else {
+                        transform: rotateZ(360deg);
+                    }
+                }
+            }
+        }
+    }
+    
 }
 
 .fireflies-bg {
@@ -89,6 +152,17 @@
     10% {
         opacity: 1;
         box-shadow: 0 0 2vw 0.4vw $orangeColor;
+    }
+}
+
+@keyframes flashElement {
+    0%, 100% {
+        opacity: 0.5;
+        box-shadow: 0 0 80px 24px $orangeColor;
+    }
+    50% {
+        opacity: 1;
+        box-shadow: 0 0 200px 60px $orangeColor;
     }
 }
 

@@ -1,0 +1,19 @@
+.about-block {
+    padding: 5rem 0 7rem;
+    .block__title {
+        margin-bottom: 4rem;
+    }
+    .about-block__wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .about-block__image,
+        .about-block__text {
+            width: calc(50% - 15px);
+        }
+        .about-block__text {
+            font-weight: 500;
+            line-height: 1.5;
+        }
+    }
+}
