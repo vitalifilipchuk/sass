@@ -43,6 +43,16 @@ function initMenu() {
             hoverElement.style.width = "0px";
         });
         item.addEventListener('click', scrollToBlock.bind(item));
+        item.addEventListener('click', function() {
+            let mainMenuIcon = document.querySelector('header .hamburger');
+            let mainMenu = document.querySelector('header .main-nav');
+            if (mainMenuIcon) {
+                mainMenuIcon.classList.remove('active');
+            }
+            if (mainMenu) {
+                mainMenu.classList.remove('active');
+            }
+        })
     });
 }
 
@@ -57,7 +67,6 @@ function isScrolledIntoView(el) {
 }
 
 function scrollEventHandler() {
-    console.log(12);
     let aboutUsImg = document.querySelector('.about-block .about-block__image');
     if (aboutUsImg) {
         if (isScrolledIntoView(aboutUsImg)) {
@@ -75,3 +84,19 @@ document.addEventListener('scroll', function() {
   document.addEventListener('DOMContentLoaded', function() {
     scrollEventHandler();
   });
+
+  function initMobileMenu() {
+    let mainMenuIcon = document.querySelector('header .hamburger');
+    let mainMenu = document.querySelector('header .main-nav');
+
+    if (mainMenuIcon) {
+        mainMenuIcon.addEventListener('click', function() {
+            this.classList.toggle('active');
+            if (mainMenu) {
+                mainMenu.classList.toggle('active');
+            }
+        });
+    }
+  }
+
+  initMobileMenu();
