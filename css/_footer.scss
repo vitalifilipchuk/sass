@@ -1,0 +1,18 @@
+.footer {
+    padding: 3rem 0;
+    .footer__layout {
+        @include verticalCenter;
+        justify-content: space-between;
+    }
+}
+
+.social-links {
+    @include verticalCenter;
+    li {
+        display: inline-block;
+        margin-right: 10px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

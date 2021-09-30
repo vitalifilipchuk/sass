@@ -19,6 +19,19 @@ function scrollToBlock(e) {
     });
   }
 
+function throttle(callback, timelimit) {
+    let wait = false;   //cache wait flag via closure              
+    return function () {               
+        if (!wait) {                   
+            callback.call();           
+            wait = true;               
+            setTimeout(function () {   
+                wait = false;          
+            }, timelimit);
+        }
+    }
+}
+
 function initMenu() {
     let topMenuItems = document.querySelectorAll('.main-nav .header__menu-item a');
     topMenuItems.forEach(item => {
@@ -34,3 +47,31 @@ function initMenu() {
 }
 
 initMenu();
+
+function isScrolledIntoView(el) {
+    let elemTop = el.getBoundingClientRect().top;
+    let elemBottom = el.getBoundingClientRect().bottom;
+    let isVisible = (elemTop >= 0) && ((elemTop + ((elemBottom - elemTop)/2)) <= window.innerHeight);
+
+    return isVisible;
+}
+
+function scrollEventHandler() {
+    console.log(12);
+    let aboutUsImg = document.querySelector('.about-block .about-block__image');
+    if (aboutUsImg) {
+        if (isScrolledIntoView(aboutUsImg)) {
+            aboutUsImg.classList.add('active');
+        }
+    }
+}
+
+throttledScrollFunc = throttle(scrollEventHandler, 250);
+
+document.addEventListener('scroll', function() {
+    throttledScrollFunc();
+  });
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    scrollEventHandler();
+  });
