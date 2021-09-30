@@ -1,0 +1,92 @@
+@media screen and (max-width: 991px) {
+    .main-block {
+        .glowing-element {
+            left: 750px;
+        }
+    }
+    
+}
+
+@media screen and (max-width: 767px) {
+    html {
+        font-size: 8px;
+    }
+
+    .main-block {
+        min-height: 380px;
+        .main-block__content {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            max-width: unset;
+        }
+        .main-block__header {
+            font-size: 3.2rem;
+        }
+        .glowing-element {
+            order: -1;
+            position: relative;
+            left: unset;
+            top: unset;
+            margin-bottom: 140px;
+            $circlesCount: 3;
+            @for $i from 1 through $circlesCount {
+                .glowing-element__circle#{$i} {
+                    $size: #{$i * 90px - ($i - 1) * 30px};
+                    width: $size;
+                    height: $size;
+                    left: calc(50% - #{$size} / 2);
+                    top: calc(50% - #{$size} / 2);
+                }
+            }
+        }
+    }
+
+    .about-block {
+        .about-block__wrap {
+            flex-direction: column;
+            .about-block__image, .about-block__text {
+                width: 100%;
+                max-width: 480px;
+            }
+            .about-block__image {
+                margin-bottom: 20px;
+            }
+        }
+        
+    }
+
+    .gallery {
+        grid-auto-rows: 200px;
+    }
+
+    .contacts-block {
+        .contacts-block__layout {
+            display: block;
+            .contacts__text,
+            .contacts__map {
+                width: 100%;
+            }
+            .contacts__text {
+                margin-bottom: 30px;
+            }
+            .contacts__map {
+                iframe {
+                    height: 300px;
+                }
+            }
+        }
+    } 
+}
+
+@media screen and (max-width: 480px) {
+    .news-feed {
+        .news-feed__list {
+            grid-template-columns: 1fr;
+        }
+    }
+    
+    .gallery {
+        grid-auto-rows: 160px;
+    }
+}
