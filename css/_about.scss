@@ -15,5 +15,15 @@
             font-weight: 500;
             line-height: 1.5;
         }
+        .about-block__image {
+            position: relative;
+            opacity: 0;
+            right: 200px;
+            transition: opacity 1s, right 1s;
+            &.active {
+                opacity: 1;
+                right: 0;
+            }
+        }
     }
 }
