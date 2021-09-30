@@ -1,1 +1,1 @@
-# sass
+# scss practice project
